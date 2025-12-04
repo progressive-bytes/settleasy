@@ -23,10 +23,22 @@ header {
     border-bottom: 1px solid #4a5568;
 }
 
+.header-content {
+    text-align: center;
+}
+
 .logo {
     font-size: 3rem;
     font-weight: 700;
     color: #63b3ed;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #a0aec0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 /* Container */
@@ -158,6 +170,10 @@ footer {
 @media (max-width: 768px) {
     .logo {
         font-size: 2.25rem;
+    }
+    
+    .tagline {
+        font-size: 0.9rem;
     }
     
     h1 {
