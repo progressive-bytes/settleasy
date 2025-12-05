@@ -128,7 +128,7 @@ a:hover {
     background-color: #2d3748; /* Slightly lighter background than body (#1a202c) */
     border-radius: 12px; /* Give it soft, modern corners */
     /* Use the blue accent color for a subtle left highlight */
-    border-left: 5px solid #63b3ed; 
+    border-left: none; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
