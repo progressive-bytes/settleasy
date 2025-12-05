@@ -122,37 +122,6 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-/* --- Button Styles --- */
-.btn-primary {
-    display: inline-block; /* Allows width/padding and ensures it wraps content */
-    background-color: #63b3ed; /* Your accent color */
-    color: #1a202c; /* Dark background for high contrast text */
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 1.15rem;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.btn-primary:hover {
-    background-color: #90cdf4; /* Lighter shade on hover */
-    color: #1a202c; /* Ensure text remains dark */
-    text-decoration: none; /* Override the default link underline on hover */
-    transform: translateY(-1px); /* Subtle lift effect */
-}
-
-/* Optional: Center the button if it's in a paragraph */
-.download-area {
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
 /* Footer */
 footer {
     background: #2d3748;
