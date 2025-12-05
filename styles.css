@@ -165,6 +165,35 @@ a:has(img.download-cta-badge):hover {
     width: auto;
 }
 
+/* --- Contact Information Box Styles --- */
+
+.contact-box {
+    /* Matches your inline styles: background: #2d3748; padding: 25px; border-radius: 8px; margin-bottom: 1rem; */
+    background: #2d3748; 
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.contact-text {
+    /* Matches your inline styles: margin: 0; font-size: 1rem; line-height: 1.8; */
+    margin: 0; 
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.contact-link {
+    /* Matches your inline styles: color: #63b3ed; text-decoration: none; */
+    color: #63b3ed;
+    text-decoration: none;
+}
+
+/* Optional: Add hover style for the new contact links */
+.contact-link:hover {
+    color: #90cdf4; /* Use your existing hover color */
+    text-decoration: underline;
+}
+
 /* Footer */
 footer {
     background: #2d3748;
