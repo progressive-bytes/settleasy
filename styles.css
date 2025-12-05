@@ -105,7 +105,7 @@ a {
     transition: color 0.2s;
 }
 
-a:hover {
+a:not(.medium-badge):hover {
     color: #90cdf4;
     text-decoration: underline;
 }
