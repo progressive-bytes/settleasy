@@ -1,5 +1,3 @@
-/* Settleasy Website Styles - Dark & Professional Theme */
-
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +15,7 @@ body {
 }
 
 /* Header */
+
 header {
     background: #2d3748;
     padding: 2rem 0;
@@ -42,6 +41,7 @@ header {
 }
 
 /* Container */
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -49,6 +49,7 @@ header {
 }
 
 /* Main Content */
+
 main {
     flex: 1;
     padding: 4rem 0;
@@ -131,32 +132,26 @@ a:has(img.download-cta-badge):hover {
     padding-left: 1.5rem;
 }
 
-/* --- Download Call to Action Highlight --- */
+/* Download Call to Action Highlight */
+
 .download-cta {
     text-align: center; 
-    background-color: #2d3748; /* Slightly lighter background than body (#1a202c) */
-    border-radius: 12px; /* Give it soft, modern corners */
-    /* Use the blue accent color for a subtle left highlight */
+    background-color: #2d3748;
+    border-radius: 12px;
     border-left: none; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Styles to center the badge and accompanying text within this new highlighted section */
 .download-cta .download-text {
     font-size: 1.15rem;
-    color: #a0aec0; /* Slightly desaturated text */
+    color: #a0aec0;
 	margin: 0rem auto 0.5rem auto;
 }
 
 .download-cta-badge {
     height: 80px;
     width: auto;
-    /* Remove vertical-align as it's not needed when display is block */
-    
-    /* FIX 1: Treats the image as a block to enable margin: auto */
     display: block; 
-    
-    /* FIX 2: Centers the block element horizontally within its container */
     margin: 1.5rem auto 0.5rem auto;
 }
 
@@ -165,10 +160,9 @@ a:has(img.download-cta-badge):hover {
     width: auto;
 }
 
-/* --- Contact Information Box Styles --- */
+/* Contact Information Box Styles */
 
 .contact-box {
-    /* Matches your inline styles: background: #2d3748; padding: 25px; border-radius: 8px; margin-bottom: 1rem; */
     background: #2d3748; 
     padding: 25px;
     border-radius: 8px;
@@ -176,25 +170,23 @@ a:has(img.download-cta-badge):hover {
 }
 
 .contact-text {
-    /* Matches your inline styles: margin: 0; font-size: 1rem; line-height: 1.8; */
     margin: 0; 
     font-size: 1rem;
     line-height: 1.8;
 }
 
 .contact-link {
-    /* Matches your inline styles: color: #63b3ed; text-decoration: none; */
     color: #63b3ed;
     text-decoration: none;
 }
 
-/* Optional: Add hover style for the new contact links */
 .contact-link:hover {
-    color: #90cdf4; /* Use your existing hover color */
+    color: #90cdf4;
     text-decoration: underline;
 }
 
 /* Footer */
+
 footer {
     background: #2d3748;
     padding: 2rem 0;
@@ -239,6 +231,7 @@ footer {
 }
 
 /* Responsive Design */
+
 @media (max-width: 768px) {
     .logo {
         font-size: 2.25rem;
