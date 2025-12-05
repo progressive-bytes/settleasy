@@ -141,7 +141,6 @@ a:not(.medium-badge):hover {
 .medium-badge {
     height: 80px; /* Sets the height */
     width: auto;   /* Ensures the width scales proportionally to maintain aspect ratio */
-    pointer-events: none;
 }
 
 /* Footer */
