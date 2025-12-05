@@ -140,19 +140,20 @@ a:has(img.download-cta-badge):hover {
     border-radius: 12px;
     border-left: none; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 2.2rem auto 0rem auto;
+    padding: 1.0rem 2.5rem 1.5rem 2.5rem;
 }
 
 .download-cta .download-text {
     font-size: 1.15rem;
     color: #a0aec0;
-	margin: 0rem auto 0.5rem auto;
 }
 
 .download-cta-badge {
     height: 80px;
     width: auto;
     display: block; 
-    margin: 1.5rem auto 0.5rem auto;
+    margin: auto;
 }
 
 .medium-badge {
