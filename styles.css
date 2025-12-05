@@ -122,8 +122,28 @@ a:hover {
     margin-bottom: 2rem;
 }
 
+/* --- Download Button Centering --- */
+.center-badge {
+    /* Centers inline content (like the <a> tag and <img>) */
+    text-align: center; 
+    margin: 2rem 0; /* Adds vertical space above and below the badge */
+}
+
+/* Optional: Center the text right above the badge */
+.download-cta .download-text {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #90cdf4;
+    font-weight: 500;
+}
+
 .medium-badge {
     height: 80px; /* Sets the height */
+    width: auto;   /* Ensures the width scales proportionally to maintain aspect ratio */
+}
+
+.large-badge {
+    height: 100px; /* Sets the height */
     width: auto;   /* Ensures the width scales proportionally to maintain aspect ratio */
 }
 
