@@ -122,6 +122,12 @@ a:hover {
     margin-bottom: 2rem;
 }
 
+/* styles.css */
+.large-badge {
+    height: 100px; /* Sets the height */
+    width: auto;   /* Ensures the width scales proportionally to maintain aspect ratio */
+}
+
 /* Footer */
 footer {
     background: #2d3748;
