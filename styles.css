@@ -122,15 +122,9 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-/* --- Download Button Centering --- */
-.center-badge {
-    /* Centers inline content (like the <a> tag and <img>) */
-    text-align: center; 
-    margin: 2rem 0; /* Adds vertical space above and below the badge */
-}
-
 /* --- Download Call to Action Highlight --- */
 .download-cta {
+    text-align: center; 
     background-color: #2d3748; /* Slightly lighter background than body (#1a202c) */
     padding: 2.5rem 2rem; /* Add padding inside the section */
     margin: 3rem 0; /* Add extra space outside the section */
@@ -142,21 +136,13 @@ a:hover {
 
 /* Styles to center the badge and accompanying text within this new highlighted section */
 .download-cta .download-text {
-    text-align: center;
     font-size: 1.15rem;
     color: #a0aec0; /* Slightly desaturated text */
     margin-bottom: 1.5rem;
 }
 
 .download-cta .center-badge {
-    text-align: center;
     margin: 1.5rem 0 0.5rem; /* Margin spacing for the badge itself */
-}
-
-/* Ensure the image badge has some rounded corners, if you haven't done this via the class yet */
-.medium-badge {
-    width: 200px; /* Setting the size via a class is better than inline style */
-    border-radius: 8px; 
 }
 
 .medium-badge {
