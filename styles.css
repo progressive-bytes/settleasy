@@ -105,9 +105,19 @@ a {
     transition: color 0.2s;
 }
 
-a:not(.medium-badge):hover {
+a:hover {
     color: #90cdf4;
     text-decoration: underline;
+}
+
+a:has(img.medium-badge):hover {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+a:has(img.download-cta-badge):hover {
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .subtitle {
@@ -119,7 +129,6 @@ a:not(.medium-badge):hover {
 .content-section {
     border-left: 3px solid #63b3ed;
     padding-left: 1.5rem;
-    margin-bottom: 2rem;
 }
 
 /* --- Download Call to Action Highlight --- */
@@ -136,11 +145,24 @@ a:not(.medium-badge):hover {
 .download-cta .download-text {
     font-size: 1.15rem;
     color: #a0aec0; /* Slightly desaturated text */
+	margin: 0rem auto 0.5rem auto;
+}
+
+.download-cta-badge {
+    height: 80px;
+    width: auto;
+    /* Remove vertical-align as it's not needed when display is block */
+    
+    /* FIX 1: Treats the image as a block to enable margin: auto */
+    display: block; 
+    
+    /* FIX 2: Centers the block element horizontally within its container */
+    margin: 1.5rem auto 0.5rem auto;
 }
 
 .medium-badge {
-    height: 80px; /* Sets the height */
-    width: auto;   /* Ensures the width scales proportionally to maintain aspect ratio */
+    height: 80px;
+    width: auto;
 }
 
 /* Footer */
