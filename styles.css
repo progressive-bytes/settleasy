@@ -111,7 +111,7 @@ a:hover {
 }
 
 a:has(img.medium-badge):hover {
-    text-decoration: none; 
+    text-decoration: auto; 
     color: inherit; 
 }
 
