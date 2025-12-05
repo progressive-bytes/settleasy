@@ -129,21 +129,38 @@ a:hover {
     margin: 2rem 0; /* Adds vertical space above and below the badge */
 }
 
-/* Optional: Center the text right above the badge */
+/* --- Download Call to Action Highlight --- */
+.download-cta {
+    background-color: #2d3748; /* Slightly lighter background than body (#1a202c) */
+    padding: 2.5rem 2rem; /* Add padding inside the section */
+    margin: 3rem 0; /* Add extra space outside the section */
+    border-radius: 12px; /* Give it soft, modern corners */
+    /* Use the blue accent color for a subtle left highlight */
+    border-left: 5px solid #63b3ed; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Styles to center the badge and accompanying text within this new highlighted section */
 .download-cta .download-text {
     text-align: center;
-    font-size: 1.1rem;
-    color: #90cdf4;
-    font-weight: 500;
+    font-size: 1.15rem;
+    color: #a0aec0; /* Slightly desaturated text */
+    margin-bottom: 1.5rem;
+}
+
+.download-cta .center-badge {
+    text-align: center;
+    margin: 1.5rem 0 0.5rem; /* Margin spacing for the badge itself */
+}
+
+/* Ensure the image badge has some rounded corners, if you haven't done this via the class yet */
+.medium-badge {
+    width: 200px; /* Setting the size via a class is better than inline style */
+    border-radius: 8px; 
 }
 
 .medium-badge {
     height: 80px; /* Sets the height */
-    width: auto;   /* Ensures the width scales proportionally to maintain aspect ratio */
-}
-
-.large-badge {
-    height: 100px; /* Sets the height */
     width: auto;   /* Ensures the width scales proportionally to maintain aspect ratio */
 }
 
