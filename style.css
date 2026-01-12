@@ -231,6 +231,19 @@ footer {
     background: #63b3ed;
 }
 
+.footer-copyright {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #4a5568;
+}
+
+.footer-copyright p {
+    color: #a0aec0;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
 /* Responsive Design */
 
 @media (max-width: 768px) {
