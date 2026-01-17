@@ -1,7 +1,12 @@
+/* --- 1. Base Styles --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,57 +19,95 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
-
-header {
-    background: #2d3748;
-    padding: 2rem 0;
-    border-bottom: 1px solid #4a5568;
-}
-
-.header-content {
-    text-align: left;
-}
-
-.logo {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #63b3ed;
-    margin-bottom: 0.5rem;
-}
-
-.tagline {
-    font-size: 1rem;
-    color: #a0aec0;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-}
-
-/* Container */
-
 .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* Main Content */
-
-main {
-    flex: 1;
-    padding: 4rem 0;
+/* --- 2. Navigation --- */
+header {
+    background: rgba(45, 55, 72, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #4a5568;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+}
+
+.nav-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-name {
+    color: #63b3ed;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    color: #a0aec0;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    margin-top: 2px;
+}
+
+/* --- 3. Layout & Sections --- */
+main {
+    flex: 1;
+    padding: 1rem 0;
+}
+
+section {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #2d3748;
+}
+
+.no-divider {
+    border-bottom: none !important;
+    padding-bottom: 0;
+}
+
+main section:last-of-type {
+    border-bottom: none;
+}
+
+/* --- 4. Typography --- */
 h1 {
     font-size: 2.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     color: #f7fafc;
     font-weight: 700;
 }
 
 h2 {
     font-size: 1.75rem;
-    margin-top: 2.5rem;
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
     color: #f7fafc;
     font-weight: 600;
@@ -85,12 +128,18 @@ p {
     line-height: 1.8;
 }
 
+.subtitle {
+    margin-bottom: 1.5rem;
+    color: #a1a1a6;
+    font-size: 1.2rem;
+}
+
 strong {
     color: #e2e8f0;
     font-weight: 600;
 }
 
-ul, ol {
+ul {
     margin-bottom: 1rem;
     margin-left: 1.5rem;
     color: #cbd5e0;
@@ -100,99 +149,157 @@ li {
     margin-bottom: 0.5rem;
 }
 
-a {
-    color: #63b3ed;
-    text-decoration: none;
-    transition: color 0.2s;
+/* --- 5. Hero Visuals --- */
+.hero-visual-double {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 20px 0 40px 0;
+    perspective: 1000px;
 }
 
-a:hover {
-    color: #90cdf4;
-    text-decoration: underline;
+.screenshot-wrapper {
+    max-width: 260px;
+    transition: transform 0.5s ease;
 }
 
-a:has(img.medium-badge):hover {
-    text-decoration: none; 
-    color: inherit; 
+.screenshot-wrapper.primary {
+    transform: rotate(-2deg) translateX(20px);
+    z-index: 2;
 }
 
-a:has(img.download-cta-badge):hover {
-    text-decoration: none; 
-    color: inherit; 
+.screenshot-wrapper.secondary {
+    transform: rotate(2deg) translateX(-20px);
+    z-index: 1;
 }
 
-.subtitle {
+.hero-visual-double:hover .screenshot-wrapper {
+    transform: rotate(0deg) translateX(0);
+}
+
+.app-screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+    box-shadow: 
+        0 0 0 8px #1c1c1e, 
+        0 20px 50px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(10, 132, 255, 0.1);
+}
+
+/* --- 6. Feature Blocks --- */
+.feature-header {
+    text-align: left;
+    margin-bottom: 2.5rem;
+}
+
+.feature-header p {
+    font-size: 1.1rem;
     color: #a0aec0;
-    font-size: 1rem;
+}
+
+.feature-split {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.feature-split.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1.2;
+    padding-bottom: 0rem;
+}
+
+.feature-image {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 120px;
+    align-self: flex-start;
     margin-bottom: 2rem;
 }
 
-.content-section {
-    border-left: 3px solid #63b3ed;
-    padding-left: 1.5rem;
+.feature-image .app-screenshot {
+    max-width: 240px;
+    transform: none !important;
 }
 
-/* Download Call to Action Highlight */
+/* --- 7. Privacy Statement --- */
+.trust-statement {
+    text-align: center;
+    background: #1e2533; 
+    margin: 3rem 0;
+    padding: 0;
+    border-radius: 12px;
+    position: relative;
+}
 
-.download-cta {
+.trust-statement .container-small {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 2rem; 
+}
+
+.trust-statement::after {
+    content: "";
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #2d3748;
+}
+
+/* --- 8. Download CTAs --- */
+section.download-cta {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #2d3748 !important;
+}
+
+.download-cta-box {
     text-align: center; 
     background-color: #2d3748;
     border-radius: 12px;
-    border-left: none; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin: 2.2rem auto 0rem auto;
-    padding: 1.0rem 2.5rem 1.5rem 2.5rem;
-}
-
-.download-cta .download-text {
-    font-size: 1.15rem;
-    color: #a0aec0;
+    margin: 0 auto; 
+    padding: 1.5rem 2.5rem;
 }
 
 .download-cta-badge {
-    height: 80px;
+    height: 60px;
     width: auto;
     display: block; 
     margin: auto;
+    transition: transform 0.2s;
 }
 
-.medium-badge {
-    height: 80px;
-    width: auto;
+.final-cta {
+    padding: 0rem 0 2rem 0;
+    text-align: center;
 }
 
-/* Contact Information Box Styles */
-
-.contact-box {
-    background: #2d3748; 
-    padding: 25px;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+.final-cta .download-cta-badge {
+    margin: 0 auto;
+    transition: transform 0.2s;
 }
 
-.contact-text {
-    margin: 0; 
-    font-size: 1rem;
-    line-height: 1.8;
+.download-cta-badge:hover, 
+.final-cta .download-cta-badge:hover {
+    transform: scale(1.05);
 }
 
-.contact-link {
-    color: #63b3ed;
-    text-decoration: none;
-}
-
-.contact-link:hover {
-    color: #90cdf4;
-    text-decoration: underline;
-}
-
-/* Footer */
-
+/* --- 9. Footer --- */
 footer {
     background: #2d3748;
-    padding: 2rem 0;
+    padding: 1rem 0;
     border-top: 1px solid #4a5568;
-    margin-top: 4rem;
+    margin-top: 0;
 }
 
 .footer-links {
@@ -214,7 +321,6 @@ footer {
 
 .footer-links a:hover {
     color: #63b3ed;
-    text-decoration: none;
 }
 
 .footer-links a.active {
@@ -234,7 +340,7 @@ footer {
 .footer-copyright {
     text-align: center;
     margin-top: 0.75rem;
-    padding-top: 0.75rem;
+    padding-top: 0.5rem;
 }
 
 .footer-copyright p {
@@ -243,38 +349,11 @@ footer {
     margin-bottom: 0;
 }
 
-/* Responsive Design */
-
+/* --- 10. Responsive --- */
 @media (max-width: 768px) {
-    .logo {
-        font-size: 2.25rem;
-    }
-    
-    .tagline {
-        font-size: 0.9rem;
-    }
-    
-    h1 {
-        font-size: 2rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    .container {
-        padding: 0 1.5rem;
-    }
-    
-    main {
-        padding: 2rem 0;
-    }
-    
-    .footer-links {
-        gap: 1.5rem;
-    }
-    
-    .content-section {
-        padding-left: 1rem;
-    }
+    h1 { font-size: 2.2rem; }
+    .hero-visual-double { flex-direction: column; gap: 40px; }
+    .screenshot-wrapper.secondary { display: none; }
+    .feature-split, .feature-split.reverse { flex-direction: column; gap: 2rem; }
+    .feature-image { position: static; justify-content: center; }
 }
