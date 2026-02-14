@@ -1,0 +1,9 @@
+/* 
+ * Theme Selector
+ * 
+ * To change the theme across all pages, simply change the @import below:
+ * - For dark theme: @import url('theme-dark.css');
+ * - For light theme: @import url('theme-light.css');
+ */
+
+@import url('theme-dark.css');

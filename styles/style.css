@@ -12,8 +12,8 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
     line-height: 1.7;
-    color: #e2e8f0;
-    background: #1a202c;
+    color: var(--text-primary);
+    background: var(--bg-primary);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -27,14 +27,15 @@ body {
 
 /* --- 2. Navigation --- */
 header {
-    background: rgba(45, 55, 72, 0.95);
+    background: var(--header-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 0.75rem 0;
-    border-bottom: 1px solid #4a5568;
+    border-bottom: 1px solid var(--border-secondary);
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: var(--header-shadow);
 }
 
 .header-content {
@@ -53,7 +54,7 @@ header {
     width: 48px;
     height: 48px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: var(--icon-shadow);
 }
 
 .brand-text {
@@ -63,7 +64,7 @@ header {
 }
 
 .brand-name {
-    color: #63b3ed;
+    color: var(--accent-primary);
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 1.2;
@@ -71,7 +72,7 @@ header {
 
 .tagline {
     font-size: 0.85rem;
-    color: #a0aec0;
+    color: var(--text-tertiary);
     font-weight: 400;
     letter-spacing: 0.2px;
     margin-top: 2px;
@@ -85,7 +86,7 @@ main {
 
 section {
     padding: 1.5rem 0;
-    border-bottom: 1px solid #2d3748;
+    border-bottom: 1px solid var(--border-primary);
 }
 
 .no-divider {
@@ -101,7 +102,7 @@ main section:last-of-type {
 h1 {
     font-size: 2.75rem;
     margin-bottom: 0rem;
-    color: #f7fafc;
+    color: var(--heading-primary);
     font-weight: 700;
 }
 
@@ -109,7 +110,7 @@ h2 {
     font-size: 1.75rem;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-    color: #f7fafc;
+    color: var(--heading-primary);
     font-weight: 600;
 }
 
@@ -117,32 +118,32 @@ h3 {
     font-size: 1.25rem;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
-    color: #e2e8f0;
+    color: var(--heading-secondary);
     font-weight: 600;
 }
 
 p {
     margin-bottom: 1rem;
-    color: #cbd5e0;
+    color: var(--text-secondary);
     font-size: 1rem;
     line-height: 1.8;
 }
 
 .subtitle {
     margin-bottom: 1.5rem;
-    color: #a1a1a6;
+    color: var(--text-subtitle);
     font-size: 1.2rem;
 }
 
 strong {
-    color: #e2e8f0;
+    color: var(--text-strong);
     font-weight: 600;
 }
 
 ul {
     margin-bottom: 1rem;
     margin-left: 1.5rem;
-    color: #cbd5e0;
+    color: var(--text-secondary);
 }
 
 li {
@@ -182,11 +183,8 @@ li {
     width: 100%;
     height: auto;
     border-radius: 34px;
-    border: 1px solid rgba(255, 255, 255, 0.15); 
-    box-shadow: 
-        0 0 0 8px #1c1c1e, 
-        0 20px 50px rgba(0, 0, 0, 0.9),
-        0 0 20px rgba(10, 132, 255, 0.1);
+    border: 1px solid var(--screenshot-border);
+    box-shadow: var(--screenshot-shadow);
 }
 
 /* --- 6. Feature Blocks --- */
@@ -197,7 +195,7 @@ li {
 
 .feature-header p {
     font-size: 1.1rem;
-    color: #a0aec0;
+    color: var(--text-tertiary);
 }
 
 .feature-split {
@@ -230,14 +228,15 @@ li {
     transform: none !important;
 }
 
-/* --- 7. Privacy Statement --- */
+/* --- 7. Privacy & Trust Statements --- */
 .trust-statement {
     text-align: center;
-    background: #1e2533; 
+    background: var(--box-bg);
     margin: 3rem 0;
     padding: 0;
     border-radius: 12px;
     position: relative;
+    border: 1px solid var(--box-border) !important;
 }
 
 .trust-statement .container-small {
@@ -246,29 +245,67 @@ li {
     padding: 2rem 2rem; 
 }
 
-.trust-statement::after {
+/* Your essential divider line for privacy.html */
+/* We only draw it if it's NOT the .last-section */
+.trust-statement:not(.last-section)::after {
     content: "";
     position: absolute;
     bottom: -3rem;
     left: 0;
     right: 0;
-    border-bottom: 1px solid #2d3748;
+    border-bottom: 1px solid var(--border-primary);
 }
 
-/* --- 8. Download CTAs --- */
+/* --- 8. Contact Page Specifics --- */
+.contact-box {
+    background: var(--box-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--box-border);
+    margin-top: 2rem;
+}
+
+.contact-link {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-box a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+.dispute-box {
+    background: var(--box-bg);
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-primary);
+    margin: 1rem 0;
+}
+
+/* --- 9. Download CTAs --- */
 section.download-cta {
     padding-top: 1.5rem;
     padding-bottom: 2.5rem;
-    border-bottom: 1px solid #2d3748 !important;
+    border-bottom: 1px solid var(--border-primary) !important;
 }
 
 .download-cta-box {
     text-align: center; 
-    background-color: #2d3748;
+    background-color: var(--cta-bg);
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--cta-shadow);
     margin: 0 auto; 
     padding: 1.5rem 2.5rem;
+    border: 1px solid var(--cta-border);
 }
 
 .download-cta-badge {
@@ -294,11 +331,11 @@ section.download-cta {
     transform: scale(1.05);
 }
 
-/* --- 9. Footer --- */
+/* --- 10. Footer --- */
 footer {
-    background: #2d3748;
+    background: var(--footer-bg);
     padding: 1rem 0;
-    border-top: 1px solid #4a5568;
+    border-top: 1px solid var(--border-secondary);
     margin-top: 0;
 }
 
@@ -310,7 +347,7 @@ footer {
 }
 
 .footer-links a {
-    color: #cbd5e0;
+    color: var(--footer-link);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
@@ -320,11 +357,11 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #63b3ed;
+    color: var(--footer-link-hover);
 }
 
 .footer-links a.active {
-    color: #63b3ed;
+    color: var(--footer-link-active);
 }
 
 .footer-links a.active::after {
@@ -334,7 +371,7 @@ footer {
     left: 0;
     right: 0;
     height: 2px;
-    background: #63b3ed;
+    background: var(--footer-link-active);
 }
 
 .footer-copyright {
@@ -344,12 +381,12 @@ footer {
 }
 
 .footer-copyright p {
-    color: #a0aec0;
+    color: var(--text-tertiary);
     font-size: 0.875rem;
     margin-bottom: 0;
 }
 
-/* --- 10. Responsive --- */
+/* --- 11. Responsive --- */
 @media (max-width: 768px) {
     h1 { font-size: 2.2rem; }
     .hero-visual-double { flex-direction: column; gap: 40px; }
