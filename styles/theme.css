@@ -6,4 +6,4 @@
  * - For light theme: @import url('theme-light.css');
  */
 
-@import url('theme-dark.css');
+@import url('shared/themes/midnight.css');
