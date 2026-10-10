@@ -298,11 +298,8 @@ section.download-cta {
 }
 
 .disclaimer-note a {
-<<<<<<< HEAD
-=======
     display: block;
     margin-top: 0.25rem;
->>>>>>> efb762f4b99124f8f18aa779168b76f10cf85f03
     color: var(--link-color);
     text-decoration: none;
     font-weight: 600;
