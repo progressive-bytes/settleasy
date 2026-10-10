@@ -168,6 +168,11 @@ li {
     margin-bottom: 0.5rem;
 }
 
+/* Default colour for plain in-text links (visited included); components below override it where needed */
+a {
+    color: var(--link-color);
+}
+
 /* --- 5. Feature Block Headers (shared) --- */
 .feature-header {
     text-align: left;
